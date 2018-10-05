@@ -1,1 +1,39 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAE5NW-1YNGTuZEgi6whB1ymVruhJPLyyg",
+            authDomain: "test-8c6d4.firebaseapp.com",
+            databaseURL: "https://test-8c6d4.firebaseio.com",
+            projectId: "test-8c6d4",
+            storageBucket: "test-8c6d4.appspot.com",
+            messagingSenderId: "835073424073"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<style>
+    #table{
+        background-color: darkorange;
+    }
+</style>
+<body>
+<table id="table">
+
+</table>
+
+
+<script>
+    var table = document.getElementById("table");
+    var MyBase = firebase.database();
+    var user = MyBase.ref("users");
+    console.log(user);
+
+</script>
+</body>
+</html>
